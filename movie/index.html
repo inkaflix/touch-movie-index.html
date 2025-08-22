@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel Admin InkaFlixLat Movie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>INKAFLIX</h1>
+  </header>
+
+  <main>
+
+    <!-- Panel tipo filtro de películas -->
+    <section class="inkaflix-search">
+      <div class="top-nav">
+        <button class="nav-btn active" data-src="movie">Filmes</button>
+        <button class="nav-btn" data-src="tv">Episódios</button>
+      </div>
+
+      <select id="yearSelect">
+        <option>Año</option>
+      </select>
+
+      <select id="sortSelect">
+        <option>Popularidad</option>
+      </select>
+
+      <select id="genreSelect">
+        <option>Género</option>
+      </select>
+
+      <button class="discover-btn" id="discoverBtn">Discover</button>
+
+      <div class="search-wrapper">
+        <input type="text" placeholder="Buscar por título o ID" id="searchInput" />
+        <button id="searchButton" class="search-btn">Buscar</button>
+      </div>
+    </section>
+
+    <!-- Formulario de publicación -->
+    <section class="form-section">
+      <label for="customIdInput">Custom ID para URL streaming:</label>
+      <input type="text" id="customIdInput" placeholder="Ejemplo: 6395779005522593699" />
+
+      <label for="postTitle">Título del post:</label>
+      <input type="text" id="postTitle" placeholder="Título para Blogger" />
+
+      <label for="postLabels">Etiquetas (separadas por coma):</label>
+      <input type="text" id="postLabels" placeholder="Ej: Acción, Drama, Thriller" />
+
+      <label for="blogId">Blog ID de Blogger:</label>
+      <input type="text" id="blogId" value="3812927193244872888" />
+    </section>
+
+    <!-- Vista previa HTML -->
+    <section class="preview-section">
+      <h2>HTML generado:</h2>
+      <textarea id="htmlOutput" placeholder="Aquí aparecerá el código generado..." readonly></textarea>
+      <button id="publishPost">Publicar en Blogger</button>
+    </section>
+
+  </main>
+
+  <!-- Footer con login -->
+  <footer>
+    <div id="login"></div>
+    <button id="logout" style="display:none;">Cerrar sesión</button>
+  </footer>
+
+  <!-- Footer adicional tipo app -->
+  <div class="whatsapp-footer">
+    <span>WhatsApp: +52 56 4617 5570</span>
+    <span>Best series generator</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="p-auth.js"></script>
+  <script src="p-blogger.js"></script>
+  <script src="p-main.js"></script>
+  <script src="p-search.js"></script>
+</body>
+</html>
