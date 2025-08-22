@@ -1,0 +1,271 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #00ffc8;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Panel de búsqueda estilo InkaFlix */
+.inkaflix-search {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ffc84d;
+  max-width: 400px;
+  margin: 0 auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Botones top: Filmes / Episódios */
+.top-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: linear-gradient(to bottom, #00ffc8, #00aa88);
+  color: #000;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 6px #00ffc888;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(to bottom, #00e6b0, #008877);
+}
+
+/* Selectores */
+.inkaflix-search select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background: linear-gradient(to bottom, #009977, #006655);
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Discover button */
+.discover-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to bottom, #00ffc8, #00aa88);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.discover-btn:hover {
+  background: linear-gradient(to bottom, #00e6b0, #008877);
+}
+
+/* Search box */
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2b2b2b;
+  color: #00ffc8;
+}
+
+.search-btn {
+  padding: 10px 16px;
+  background: linear-gradient(to bottom, #00ffc8, #00aa88);
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: linear-gradient(to bottom, #00e6b0, #008877);
+}
+
+/* WhatsApp footer */
+.whatsapp-footer {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto 0;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/* Formulario Admin */
+.form-section {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffc84d;
+}
+
+.form-section label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #00ffc8;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 10px;
+  background: #2b2b2b;
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-section input:focus {
+  border-color: #00ffa2;
+}
+
+.form-section button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background-color: #00ffc8;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #00e6b0;
+}
+
+/* Vista previa */
+.preview-section {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffc84d;
+}
+
+.preview-section h2 {
+  margin-bottom: 10px;
+  color: #00ffc8;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  background: #2b2b2b;
+  color: #00ffc8;
+  border: 1px solid #00ffc8;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+/* Footer login/logout */
+footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer button {
+  padding: 10px 20px;
+  background-color: #00ffc8;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+footer button:hover {
+  background-color: #00e6b0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .preview-section {
+    width: 100%;
+  }
+
+  .whatsapp-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+}
+/* Botón de publicación en Blogger */
+#publishPost {
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  background-color: #00ffc8;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 12px #00ffc88c;
+}
+
+#publishPost:hover {
+  background-color: #00e6b0;
+  box-shadow: 0 0 16px #00ffc8aa;
+}
