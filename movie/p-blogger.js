@@ -7,6 +7,7 @@ document.getElementById("publishPost").addEventListener("click", (e) => {
   const title = document.getElementById("postTitle").value.trim();
   const content = document.getElementById("htmlOutput").value.trim();
   const labelsInput = document.getElementById("postLabels").value.trim();
+  const posterUrl = document.getElementById("posterUrl")?.value?.trim() || ""; // URL de la imagen
 
   const labels = labelsInput
     ? labelsInput.split(",").map(label => label.trim()).filter(label => label.length > 0)
@@ -27,13 +28,22 @@ document.getElementById("publishPost").addEventListener("click", (e) => {
       kind: "blogger#post",
       title,
       content,
-      labels
+      labels,
+      customMetaData: JSON.stringify({
+        linkTitle: posterUrl,      // Vínculo del título
+        enclosureLink: posterUrl,  // Igual que en "Agregar vínculo"
+        enclosureType: "image/jpeg" // Tipo de archivo
+      })
     })
   })
     .then(res => res.json())
     .then(data => {
-      alert("✅ Publicado en Blogger:\n" + data.url);
-      // No abre pestaña ni redirige
+      if (data.id) {
+        alert("✅ Publicado en Blogger:\n" + data.url);
+      } else {
+        console.error(data);
+        alert("❌ Error al publicar. Revisa los datos o el token.");
+      }
     })
     .catch(err => {
       console.error(err);
